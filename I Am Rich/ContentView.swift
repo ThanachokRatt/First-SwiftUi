@@ -9,14 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            Color(.systemTeal).edgesIgnoringSafeArea(
+                .all)
+            VStack {
+                Text("I Am Rich")
+                    .font(.system(size: 55))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                Image("diamond")
+                    .resizable().aspectRatio(contentMode: .fit).frame(width:200 ,height:200,alignment: .center)
+            }
         }
-        .padding()
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
